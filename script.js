@@ -62,8 +62,17 @@ function createLaserElement(){
 }
 
 //movimentar o tiro
-function moveLaser(){
-
+function moveLaser(laser){
+    //tempo para surgir um novo laser
+    let laserInterval = setInterval(() => {
+        let xPosition = parseInt(laser.style.left); //posicao do laser que foi criado
+        
+        if(xPosition === 340) {
+            laser.remove();
+        } else {
+            laser.style.left = `${xPosition + 8}px`;
+        }
+    }, 10);
 }
 
 window.addEventListener("keydown", flyShip);
