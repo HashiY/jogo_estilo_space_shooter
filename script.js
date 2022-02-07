@@ -29,7 +29,7 @@ function moveUp(){
     }
     else {
         let position = parseInt(topPosition);
-        position -= 50;                         // sobe
+        position -= 25;                         // sobe
         yourShip.style.top = `${position}px`;
     }
 }
@@ -42,7 +42,7 @@ function moveDown() {
     } 
     else {
         let position = parseInt(topPosition);
-        position += 50;                         //descer
+        position += 25;                         //descer
         yourShip.style.top = `${position}px`;
     }
 }
@@ -101,7 +101,7 @@ function createAliens() {
     newAlien.classList.add('alien'); //css
     newAlien.classList.add('alien-transition');
     newAlien.style.left = '370px';
-    newAlien.style.top = `${Math.floor(Math.random() * 330) + 30}px`;
+    newAlien.style.top = `${Math.floor(Math.random() * 330) + 20}px`;
     playArea.appendChild(newAlien);
     moveAlien(newAlien);
 }
