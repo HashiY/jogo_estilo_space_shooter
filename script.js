@@ -28,3 +28,16 @@ function moveUp(){
     }
 }
 
+//função de descer
+function moveDown() {
+    let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
+    if(topPosition === "550px"){
+        return;
+    } else {
+        let position = parseInt(topPosition);
+        position += 50;                         //descer
+        yourShip.style.top = `${position}px`;
+    }
+}
+
+window.addEventListener("keydown", flyShip);
